@@ -9,7 +9,7 @@ your references. If you are changing the kernel, the SDK, a contract surface, or
 reference capsule, read this first.
 
 Astrid is a polyrepo. The kernel, the SDK, the RFCs, and each capsule are their own git
-repositories under the `unicity-astrid` organization. Working on it means knowing which repo
+repositories under the `astrid-runtime` organization. Working on it means knowing which repo
 owns what, what may never cross the kernel boundary, when a change needs an RFC, and how
 releases are cut. This handbook is the operational law for that work.
 
@@ -24,9 +24,9 @@ releases are cut. This handbook is the operational law for that work.
    schema, VFS semantics, capsule interface standards, or the SDK public API. Kernel-internal
    changes that preserve the guest-visible contract do not need one. Know the difference before
    you open a PR.
-3. **Ground in the code.** Documentation, including older READMEs in this very repository, drifts
-   from the implementation. When the two disagree, the code wins, and the documentation is the
-   bug. Verify against the source, not against prose.
+3. **Ground in the code.** Verify implementation claims against the owning repository and
+   record the source revision. Correct the relevant documentation as part of the change.
+   For product behavior, check the bundled runtime revision as well as current main.
 
 ## How releases and reviews work
 
